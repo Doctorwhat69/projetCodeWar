@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Narcissistic Number Checker",
+      "date": "2025-04-01",
+      "description": "Vérifie si un nombre est narcissique en le comparant à la somme de ses chiffres élevés à la puissance du nombre total de chiffres."
+    },
+    {
+      "name": "Playing with Digits",
+      "date": "2025-04-02",
+      "description": "Additionne les chiffres d’un nombre après les avoir élevés à une puissance croissante, et détermine si le total est un multiple du nombre initial."
+    },
+    {
+      "name": "Prime Number Validator",
+      "date": "2025-04-03",
+      "description": "Détermine si un nombre est premier en vérifiant les diviseurs jusqu'à sa racine carrée, en excluant 0, 1 et les négatifs."
+    },
+    {
+      "name": "Pangram Checker",
+      "date": "2025-04-04",
+      "description": "Analyse une phrase pour s'assurer qu'elle contient toutes les lettres de l'alphabet, sans tenir compte des espaces ou de la casse."
+    },
+    {
+      "name": "Split CamelCase",
+      "date": "2025-04-05",
+      "description": "Insère un espace avant chaque majuscule dans une chaîne en camelCase pour la rendre plus lisible."
+    }
+  ]
