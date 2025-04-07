@@ -1,27 +1,32 @@
 [
-    {
-      "name": "Narcissistic Number Checker",
-      "date": "2025-04-01",
-      "description": "Vérifie si un nombre est narcissique en le comparant à la somme de ses chiffres élevés à la puissance du nombre total de chiffres."
-    },
-    {
-      "name": "Playing with Digits",
-      "date": "2025-04-02",
-      "description": "Additionne les chiffres d’un nombre après les avoir élevés à une puissance croissante, et détermine si le total est un multiple du nombre initial."
-    },
-    {
-      "name": "Prime Number Validator",
-      "date": "2025-04-03",
-      "description": "Détermine si un nombre est premier en vérifiant les diviseurs jusqu'à sa racine carrée, en excluant 0, 1 et les négatifs."
-    },
-    {
-      "name": "Pangram Checker",
-      "date": "2025-04-04",
-      "description": "Analyse une phrase pour s'assurer qu'elle contient toutes les lettres de l'alphabet, sans tenir compte des espaces ou de la casse."
-    },
-    {
-      "name": "Split CamelCase",
-      "date": "2025-04-05",
-      "description": "Insère un espace avant chaque majuscule dans une chaîne en camelCase pour la rendre plus lisible."
-    }
-  ]
+  {
+    "name": "Narcissistic Number Checker",
+    "date": "2025-04-01",
+    "description": "Vérifie si un nombre est narcissique en le comparant à la somme de ses chiffres élevés à la puissance du nombre total de chiffres.",
+    "code": "let number = x;\nconst tab = Array.from(String(number), Number);\nlet n = tab.length;\nlet initial = 0;\nfor (let i = 0; i < n; i++) {\n  let numero = Math.pow(tab[i], n);\n  initial += numero;\n}\nlet value = initial === number;"
+  },
+  {
+    "name": "Playing with Digits",
+    "date": "2025-04-02",
+    "description": "Additionne les chiffres d’un nombre après les avoir élevés à une puissance croissante, et retourne un multiple si possible, sinon -1.",
+    "code": "function digPow(n, p) {\n  let nArray = String(n).split('').map(Number);\n  let additionResult = 0;\n  for (let i = 0; i < nArray.length; i++) {\n    additionResult += nArray[i] ** (p + i);\n  }\n  return additionResult % n === 0 ? additionResult / n : -1;\n}"
+  },
+  {
+    "name": "Prime Number Validator",
+    "date": "2025-04-03",
+    "description": "Détermine si un nombre est premier en excluant les négatifs, 0 et 1, et en testant les diviseurs jusqu'à sa racine carrée.",
+    "code": "function isPrime(num) {\n  if (num < 2) return false;\n  let numberSqrt = Math.floor(Math.sqrt(num));\n  for (let i = 2; i <= numberSqrt; i++) {\n    if (num % i === 0) return false;\n  }\n  return true;\n}"
+  },
+  {
+    "name": "Pangram Checker",
+    "date": "2025-04-04",
+    "description": "Vérifie si une phrase contient toutes les lettres de l’alphabet, en ignorant les majuscules et les espaces.",
+    "code": "let alphabet = \"abcdefghijklmnopqrstuvwxyz\";\nlet alphabetArray = alphabet.split(\"\");\nlet stringLower = string.toLowerCase().replace(/\\s/g, \"\");\nlet missing = alphabetArray.filter(letter => !stringLower.includes(letter));\nreturn missing.length === 0;"
+  },
+  {
+    "name": "Split CamelCase",
+    "date": "2025-04-05",
+    "description": "Ajoute un espace avant chaque majuscule dans une chaîne camelCase pour en faciliter la lecture.",
+    "code": "function solution(string) {\n  let stringArray = string.split(\"\");\n  for (let i = 0; i < stringArray.length; i++) {\n    if (/[A-Z]/.test(stringArray[i])) {\n      stringArray.splice(i, 0, \" \");\n      i++;\n    }\n  }\n  return stringArray.join(\"\");\n}"
+  }
+]
