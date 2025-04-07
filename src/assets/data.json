@@ -15,7 +15,8 @@
     "name": "Prime Number Validator",
     "date": "2025-04-03",
     "description": "Détermine si un nombre est premier en excluant les négatifs, 0 et 1, et en testant les diviseurs jusqu'à sa racine carrée.",
-    "code": "function isPrime(num) {\n  if (num < 2) return false;\n  let numberSqrt = Math.floor(Math.sqrt(num));\n  for (let i = 2; i <= numberSqrt; i++) {\n    if (num % i === 0) return false;\n  }\n  return true;\n}"
+    "code": "function isPrime(num) {\n  let numberSqrt = parseInt(Math.sqrt(num));\n  if (num < 2) return false;\n\n  for (let i = 2; i <= numberSqrt; i++) {\n    if (Number.isInteger(num / i)) {\n      return false;\n    }\n  }\n  return true;\n}"
+
   },
   {
     "name": "Pangram Checker",
