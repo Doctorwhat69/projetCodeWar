@@ -22,7 +22,7 @@ const KataList = () => {
                 <pre className="kata-code">
                   <code className="language-javascript">{kata.code}</code>
                 </pre>
-                <div></div>
+                <div><div></div></div>
               </div>
             ))}
 
